@@ -1,4 +1,11 @@
-  static int factorilize()
+  class test{
+    public static void main(String[] args) {
+
+
+        factorilize();
+    }
+
+    static int factorilize()
     {
         System.out.println("Enter a number: ");
         Scanner input = new Scanner(System.in);
@@ -15,3 +22,4 @@
 
         return result;
     }
+}
