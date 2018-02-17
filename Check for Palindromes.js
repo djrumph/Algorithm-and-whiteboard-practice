@@ -42,6 +42,25 @@ backwardString = backwardString.join("");
   
 }
 
+//side practice
+function palindrome2(str) {
+  
+  str = str.toLowerCase();
+  str = str.replace(/[\W_]+/g, ' ');
+  str = str.replace(/ /g, "");
+  
+  var newStr = str.split("");
+  newStr = newStr.reverse();
+  newStr = newStr.join("");
+  
+  if(str ===newStr){
+    return true;
+  }
+  else {
+    
+    return false;
+  }
+}
 
 
 palindrome("1 eye for of 1 eye.");
