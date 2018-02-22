@@ -56,6 +56,23 @@ return sentenceArray.join(" ");
 
 }
 
+//alternate way using map funtion and no new variables
+
+function firstWordCapitalize(str){
+
+return str
+.toLowerCase()
+.split(' ')
+.map(function(word){
+
+  return word[0].toUpperCase() + word.substring(1,word.length)
+})
+
+.join(" ");
+
+
+}
+
 console.log(firstWordCapitalize( "helLo my friEnd"));
 
 console.log(firstWordCapitalize( "hello my friend"));
