@@ -1,4 +1,21 @@
 
+//cleaner way to do it
+function isPalin(str){
+
+  str = str.toLowerCase().replace(/[\W]/g, "")
+  reverseStr = str.split("").reverse().join("");
+
+if (str === reverseStr){
+  return true;
+}
+else{
+  return false;
+}
+
+
+}
+
+
 function palindrome(str) {
   // Good luck!
   
@@ -61,6 +78,8 @@ function palindrome2(str) {
     return false;
   }
 }
+
+
 
 
 palindrome("1 eye for of 1 eye.");
