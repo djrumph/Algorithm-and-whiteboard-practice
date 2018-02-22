@@ -22,5 +22,15 @@ function reverseString2(str){
     
   }
 
+//alternate way to do it
+
+
+  function reverseString3(str ){
+
+    return str.split("").reverse().join("");
+
+  }
+
+
 
 reverseString("hello");
