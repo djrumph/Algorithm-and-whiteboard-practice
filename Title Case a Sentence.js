@@ -43,7 +43,7 @@ function titleCase(str) {
 //alternate way using one variable
 function firstWordCapitalize(str){
 
-var sentenceArray = str.split(' ');
+var sentenceArray = str.toLowerCase().split(' ');
 
 for(var i = 0; i<sentenceArray.length; i++){
 
@@ -55,6 +55,8 @@ return sentenceArray.join(" ");
 
 
 }
+
+console.log(firstWordCapitalize( "helLo my friEnd"));
 
 console.log(firstWordCapitalize( "hello my friend"));
 
