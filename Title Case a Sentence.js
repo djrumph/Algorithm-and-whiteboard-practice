@@ -31,6 +31,7 @@ function titleCase(str) {
       
     }
   
+  
  
   
   //return the array as a single string
@@ -38,5 +39,23 @@ function titleCase(str) {
   
   
 }
+
+//alternate way using one variable
+function firstWordCapitalize(str){
+
+var sentenceArray = str.split(' ');
+
+for(var i = 0; i<sentenceArray.length; i++){
+
+
+  sentenceArray[i] = sentenceArray[i].charAt(0).toUpperCase() + sentenceArray[i].substring(1,sentenceArray[i].length);
+}
+
+return sentenceArray.join(" ");
+
+
+}
+
+console.log(firstWordCapitalize( "hello my friend"));
 
 titleCase("I'm a little tea pot");
