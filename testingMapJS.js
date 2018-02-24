@@ -43,3 +43,19 @@ testArray.forEach(function (char){
 
 
 console.log(testMap);
+
+
+var high = 0;
+// mods trying stuff out
+
+for(let char in newMap){
+
+if(newMap[char] > high ){
+
+  high = newMap[char];
+}
+
+
+};
+
+console.log(high);
