@@ -1,27 +1,28 @@
-str = "aglkgjatjerob";
+//var s = "stackoverflow";
 
-var startPosition = 0;
-var strLongest ="";
-var high = 0;
-var current = 0;
-var newMap = new Set();
+const lengthOfLongestSubstring = str => {
+  let result = [],
+      maxResult = 0;
+    let string = "";
 
-
-for(var i = 0; i<str.length; i++){
-  var c = str.charAt(i);
-
-
-  while(newMap.has(c)){
-    newMap.delete(str.charAt[startPosition]);
-    startPosition++;
-  }
-  newMap.add(c);
-
-  if(high <i - startPosition +1){
-    max = i - startPosition +1;
-    strLongest = str.substr(startPosition, i+1);
+  for (let i=0; i<str.length; i++) {
+    if (!result.includes(str[i])) {
+      result.push(str[i]);
+    } else {
+      maxResult = i;
+    }
   }
 
-}
+  
+  for(var i = 0; i<maxResult;i++){
+    string += str.charAt(i);
 
-console.log(longest);
+  }
+
+return string; 
+  
+  
+};
+
+
+console.log(lengthOfLongestSubstring("stackoverflow"))
