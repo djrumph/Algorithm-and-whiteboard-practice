@@ -28,3 +28,22 @@ class test{
         }
 
         return longest;
+    }
+    
+    
+     public static void longestWord(){
+
+        String sentence = "The quick brown fox jumped over the lazy dog";
+
+        String[] words = sentence.split(" ");
+        String longest = "";
+
+        for (int i = 0; i < words.length; i++) {
+
+            if (words[i].length() > longest.length())
+                longest = words[i];
+        }
+
+        System.out.println(longest);
+        System.out.println(longest.length());
+    }
