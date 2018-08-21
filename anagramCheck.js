@@ -1,5 +1,6 @@
 //checking is a string is an anagram using objects
 
+
 anagram("aaz", "zaa");
 
 
@@ -27,7 +28,7 @@ for(val of arr1){
 object[val] = (object[val] || 0) +1;
 }
 
-for(val of arr1){
+for(val of arr2){
 object2[val] = (object2[val] || 0) +1;
 }
 
