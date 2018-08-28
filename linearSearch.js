@@ -1,15 +1,17 @@
-//basic linear search function
 arr = [1,2,3,4,5]
 
-linearSearch(arr,4);
+linearSearch(arr,5);
 function linearSearch(arr, num){
 
-for(val in arr){
+let    count = 0;
+
+for(let val in arr){
 
     if(arr[val] ===num){
 
-        return arr.indexOf(arr[val]);
+        return count;
     }
+    count++;
 }
 
 return -1;
