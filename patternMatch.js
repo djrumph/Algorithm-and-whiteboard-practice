@@ -7,8 +7,8 @@ function patternMatch(strLong, strCheck){
     matches = 0;
     for(let i = 0; i<= strLong.length; i++){
         for(let j = 0; j<= strCheck.length-1; j++){
-            if(strLong[i] !== strCheck[j+i]){
-            break;
+            if(strLong[i] !== strCheck[j]){
+            
             }
             else{
                 count++;
