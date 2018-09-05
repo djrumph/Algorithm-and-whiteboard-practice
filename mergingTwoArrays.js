@@ -1,33 +1,29 @@
-arr1 = [1,5, 10, 70,90,500];
-arr2 = [2,3,20,60,400,1000,200000,];
-results = []
+arr1 = [100];
+arr2 = [1,2,3,4,5,6];
+results = [];
 
-count = 0;
+i = 0;
+j = 0;
 
-while(count<arr1.length || count<arr2.length){
-
-    if(arr1[count] <arr2[count]){
-
-        if(arr1[count]){
-        results.push(arr1[count]);
+while(i<arr1.length && j<arr2.length){
+    if(arr1[i] <arr2[j]){
+        results.push(arr1[i]);
+        i++;
         }
-
-        if(arr2[count]){
-        results.push(arr2[count]);
-        }
-    }
     else{
-            if(arr2[count]){
-        results.push(arr2[count]);
-        }
-
-           if(arr1[count]){
-        results.push(arr1[count]);
-        }
+        results.push(arr2[j]);
+        j++;
     }
-count++
+}
 
+while(i< arr1.length){
+    results.push(arr1[i]);
+    i++;
+}
+
+while(j< arr2.length){
+    results.push(arr1[i]);
+    j++;
 }
 console.log(results);
-
 
