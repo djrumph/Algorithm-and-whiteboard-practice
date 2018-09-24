@@ -15,21 +15,29 @@ class HashTable {
     }
 
     set(key, value){
-       //var item = hash(key);
-       //var spot = 0;
-       this.keyMap[key] = value;
+      // this.keyMap[key] = value;
+       let index = this.hash(key);
+       if(!this.keyMap[index]){
+           this.keyMap[index] = [];
+       }
+       this.keyMap[index].push([key,value]);
     }
 
     get(key){
+        let index = this.hash(key);
       // var item = hash(key);
-       if(!this.keyMap[key]){
-           return undefined;
+       if(this.keyMap[index]){
+           for(let i =0; i<this.keyMap[index].length; i++){
+               if(this.keyMap[index] [i][0] === key) {
+                   return this.keymap[index][i][1];
+               }
+           }
        }
-       return this.keyMap[key];
+       return undefined;
     }
 }
 
-var hash = new HashTable();
+let hash = new HashTable();
 
 hash.set(1 , "blue");
 hash.set(13 , "purple");
