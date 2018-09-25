@@ -40,8 +40,8 @@ class HashTable {
         let foundKeys = [];
          for(let i =0; i<this.keyMap.length; i++){
              if(this.keyMap[i]){
-                 for(let i = 0; i<this.keyMap[0].length; i++){
-                 foundKeys.push(this.keyMap[0][i][0]);
+                 for(let j = 0; i<this.keyMap[i].length; j++){
+                 foundKeys.push(this.keyMap[i][j][0]);
                  }
              }
 
@@ -49,16 +49,16 @@ class HashTable {
         return foundKeys;
     }
     values(){
-        let foundKeys = [];
+        let foundValues = [];
          for(let i =0; i<this.keyMap.length; i++){
              if(this.keyMap[i]){
-                 for(let i = 0; i<this.keyMap[0].length; i++){
-                 foundKeys.push(this.keyMap[0][i][1]);
+                 for(let j = 0; i<this.keyMap[i].length; j++){
+                 foundValues.push(this.keyMap[i][j][1]);
                  }
              }
 
          }
-        return foundKeys;
+        return foundValues;
     }
 
 }
