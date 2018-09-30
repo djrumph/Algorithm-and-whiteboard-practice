@@ -105,7 +105,7 @@ class SinglyLinkedList{
         this.length++;
         return this;
      }
-
+		 //O(n) run time
      kthElement(num){
         //store head element in variable
         var current = this.head;
@@ -161,12 +161,15 @@ console.log("Question 4, the 25th to the last element of a list of 50 is: " + li
 
 //5.  Write a program to sort a stack such that the smallest items are on the top.  You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array).  The stack supports the following operations: push, pop, peek and isEmpty.
 
+//I'm using an array but only pushing and poping from the back. There will be no use of indexes other than the last index to memic the peek() function
+//one disadvantage to doing it this way is that, in order to use pop() the array function must go through the entire array to pop, while a stack object would do this in constant time
 //there are two stacks, lowStack and highStack. there is one temp variable. 
 
 lowStack = [33,54,32,70,56,1,403];
 
 
 console.log("Question 5, the stack with smallest numbers on top: " + ascending(lowStack));
+
 
 function ascending(lowStack){
     highStack =[];
