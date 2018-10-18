@@ -1,0 +1,45 @@
+/*
+ * Complete the 'maxStreak' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER m
+ *  2. STRING_ARRAY data
+ */
+
+function maxStreak(m,data) {
+    // Write your code here
+    let dayCount = 0;
+    let highest = 0;
+
+    //need to build a string to be used to check for everyone's attendance
+    let testString = "";
+
+    //loop through array to check if all employees were working
+    for(let i = 0; i <= m-1; i++){
+        testString += "Y";
+        console.log(testString);
+    }
+
+    for(let i = 0; i < data.length; i++){
+
+
+        if(data[i] === testString){
+            dayCount++;
+        }
+        else{
+            if(dayCount > highest){
+                highest = dayCount;
+            }
+            dayCount = 0;
+        }
+    }
+
+    //final check for highest value
+    if(dayCount > highest){
+        highest = dayCount;
+    }
+    
+    return highest
+}
+
