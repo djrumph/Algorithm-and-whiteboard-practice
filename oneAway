@@ -1,0 +1,34 @@
+//There are three types of edits that can be performed on strings: insert a char, remove a char, or replace a char. 
+//Given two strings, write a function that checks if they are one edit, or zero edits, away. 
+
+function oneAway(string1, string2){
+
+    if(Math.abs(string1.length - string2.length) > 1) return false;
+
+    if(string1.length > string2.length){
+        strToObj = string1;
+        strCheck = string2
+    }
+    else{
+        strToObj = string2;
+        strCheck = string1;
+    }
+    
+    let obj = {}
+
+    for(val of strToObj){
+        obj[val] = (obj[val] || 0 ) + 1;
+    }
+
+    let mistake = 0;
+
+    for(let i = 0; i < strToObj.length; i++){
+        if(!(strCheck[i] in obj)){
+            mistake++;
+        }
+        if(mistake ==2){
+            return false;
+        }
+    }
+    return true;
+}
