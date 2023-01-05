@@ -29,6 +29,9 @@ int main(){
     printf("%d", ptr->num);
 
 
+    int searchValue = 1;
+    printf("found %d at node %d", searchValue, searchNodes(ptr, searchValue));
+
 
 }
 
@@ -39,4 +42,16 @@ int countNodes(NodePtr currentNode){
         currentNode = currentNode->next;
     }
     return count;
+}
+
+Node * searchNodes(NodePtr currentNode, int valueToFind){
+    // int count = 1;
+    while(currentNode != NULL){
+        if(currentNode->num == valueToFind ){
+            return currentNode;
+            //return count;
+        }
+        // count++;
+        currentNode = currentNode->next;
+    }
 }
