@@ -55,3 +55,10 @@ Node * searchNodes(NodePtr currentNode, int valueToFind){
         currentNode = currentNode->next;
     }
 }
+
+Node * tailNode(NodePtr currentNode){
+    while(currentNode->next != NULL){
+        currentNode= currentNode->next;
+    }
+    return currentNode;
+}
