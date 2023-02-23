@@ -12,8 +12,6 @@ int main()
 }
 
 int search(int* nums, int numsSize, int target){
-
-
     //Linear search
     // for(int x = 0; x <numsSize; x++){
     //     if(nums[x]==target ){
@@ -22,25 +20,51 @@ int search(int* nums, int numsSize, int target){
     // }
     // return -1;
 
-    //binary search
+    //binary search with indexes
+    // int leftPointer = 0;
+    // int rightPointer = numsSize-1;
+    // int middle;
+
+    // while(leftPointer <= rightPointer){
+    //     middle = floor((rightPointer + leftPointer) / 2);
+
+    //     if(nums[middle] == target){
+    //         return middle;
+    //     }
+
+    //     else if(nums[middle] > target){
+    //         rightPointer = middle - 1;
+    //     }
+
+    //     else{
+    //         leftPointer = middle + 1;
+    //     }
+    // }
+    // return -1;
+
+    //binary search with pointers
     int leftPointer = 0;
-    int rightPointer = numsSize;
+    int rightPointer = numsSize -1;
     int middle;
 
-    while(leftPointer < rightPointer){
-        middle = floor((rightPointer + leftPointer) / 2);
+    // printf("%d, %d", leftPointer, rightPointer);
 
-        if(nums[middle] == target){
-            return middle;
-        }
+    while(leftPointer <= rightPointer){
 
-        else if(nums[middle] > target){
-            rightPointer = middle;
+        middle = floor((leftPointer + rightPointer) / 2);
+
+        if(*(nums + middle) > target){
+            rightPointer = middle - 1;
+        } 
+        
+        else if(*(nums + middle) < target){
+            leftPointer = middle  + 1;
         }
 
         else{
-            leftPointer = middle;
-        }
+            return middle;
+         }
     }
+
     return -1;
 }
